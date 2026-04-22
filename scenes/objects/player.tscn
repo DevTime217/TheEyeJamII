@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://do6v51vi1eify"]
+
+[ext_resource type="Script" uid="uid://c0g3ptbi8dfoh" path="res://scenes/objects/player.gd" id="1_a8lix"]
+[ext_resource type="Texture2D" uid="uid://cgmo5k45iykeu" path="res://assets/textures/PlayerEyeJam.png" id="2_2147m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6m1ak"]
+
+[node name="Player" type="CharacterBody2D" unique_id=806946079]
+script = ExtResource("1_a8lix")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=739062153]
+texture = ExtResource("2_2147m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=608625327]
+scale = Vector2(2, 3)
+shape = SubResource("RectangleShape2D_6m1ak")
