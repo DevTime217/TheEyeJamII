@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dd0t8vqmygy66"]
+
+[ext_resource type="Texture2D" uid="uid://bsw0gcwthcdo5" path="res://assets/textures/Heart.png" id="1_s4ogp"]
+[ext_resource type="Texture2D" uid="uid://cre7w0qj4lwe8" path="res://assets/textures/InventoryBox.png" id="2_2sf84"]
+
+[node name="PlayerUI" type="Node2D" unique_id=1246732899]
+
+[node name="HealthBar" type="Node2D" parent="." unique_id=1567662495]
+position = Vector2(1800, 0)
+
+[node name="ColorRect" type="ColorRect" parent="HealthBar" unique_id=533243700]
+offset_right = 120.0
+offset_bottom = 20.0
+mouse_filter = 2
+color = Color(1, 0.14117648, 0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="HealthBar" unique_id=1001942783]
+position = Vector2(-20, 15)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_s4ogp")
+
+[node name="Inventory" type="Node2D" parent="." unique_id=305613711]
+position = Vector2(64, 1000)
+
+[node name="Sprite2D" type="Sprite2D" parent="Inventory" unique_id=1333134833]
+texture = ExtResource("2_2sf84")

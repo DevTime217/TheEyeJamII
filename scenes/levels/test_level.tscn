@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://doegu8lqtgm41"]
 
 [ext_resource type="PackedScene" uid="uid://do6v51vi1eify" path="res://scenes/objects/player.tscn" id="1_jbqir"]
+[ext_resource type="PackedScene" uid="uid://dd0t8vqmygy66" path="res://scenes/ui/player_ui.tscn" id="2_yautc"]
 
 [node name="TestLevel" type="Node2D" unique_id=699173106]
 
 [node name="Player" parent="." unique_id=806946079 instance=ExtResource("1_jbqir")]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2138327487]
+
+[node name="PlayerUI" parent="." unique_id=1246732899 instance=ExtResource("2_yautc")]
+position = Vector2(-960, -540)
