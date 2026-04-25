@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://osx2up4xoi78"]
+
+[ext_resource type="Script" uid="uid://bfx3d2qae2a30" path="res://scenes/ui/pause_menu.gd" id="1_6tw0m"]
+
+[node name="PauseMenu" type="Node2D" unique_id=1823551976]
+process_mode = 3
+script = ExtResource("1_6tw0m")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1648886759]
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="MainButtons" type="VBoxContainer" parent="CenterContainer" unique_id=1992742362]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Resume" type="Button" parent="CenterContainer/MainButtons" unique_id=93380592]
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+text = "RESUME"
+
+[node name="Quit" type="Button" parent="CenterContainer/MainButtons" unique_id=277255526]
+layout_mode = 2
+theme_override_font_sizes/font_size = 85
+text = "QUIT"
+
+[connection signal="pressed" from="CenterContainer/MainButtons/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="CenterContainer/MainButtons/Quit" to="." method="_on_quit_pressed"]

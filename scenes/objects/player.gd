@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 const tile_size: Vector2 = Vector2(16, 16)
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if Input.is_action_pressed("move_up"):
 		_move(Vector2(0, -1))
 	elif Input.is_action_pressed("move_down"):

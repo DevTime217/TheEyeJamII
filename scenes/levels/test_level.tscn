@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://do6v51vi1eify" path="res://scenes/objects/player.tscn" id="1_jbqir"]
 [ext_resource type="PackedScene" uid="uid://dd0t8vqmygy66" path="res://scenes/ui/player_ui.tscn" id="2_yautc"]
+[ext_resource type="PackedScene" uid="uid://osx2up4xoi78" path="res://scenes/ui/pause_menu.tscn" id="3_fr1um"]
 
 [node name="TestLevel" type="Node2D" unique_id=699173106]
 
@@ -10,4 +11,8 @@
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2138327487]
 
 [node name="PlayerUI" parent="." unique_id=1246732899 instance=ExtResource("2_yautc")]
+position = Vector2(-960, -540)
+
+[node name="PauseMenu" parent="." unique_id=1823551976 instance=ExtResource("3_fr1um")]
+visible = false
 position = Vector2(-960, -540)
