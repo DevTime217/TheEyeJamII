@@ -27,4 +27,5 @@ position = Vector2(64, 1000)
 texture = ExtResource("2_2sf84")
 
 [node name="Key" type="Sprite2D" parent="Inventory" unique_id=1259552013]
+visible = false
 texture = ExtResource("3_jg20v")
