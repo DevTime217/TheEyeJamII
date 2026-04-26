@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://3dhs7o6xy8ib"
+path="res://.godot/imported/hum 8 wierd.wav-25c979aa1bd91c313d5112f25fd53b3a.sample"
+
+[deps]
+
+source_file="res://assets/music/hum 8 wierd.wav"
+dest_files=["res://.godot/imported/hum 8 wierd.wav-25c979aa1bd91c313d5112f25fd53b3a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

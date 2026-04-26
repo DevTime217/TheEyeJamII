@@ -6,4 +6,4 @@ func _process(_delta):
 			$PlayerUI/Inventory/Key.visible = true
 	if $LibraryDoor.has_overlapping_bodies() == true:
 		if Input.is_action_just_pressed("interact"):
-			pass
+			get_tree().change_scene_to_file("res://scenes/levels/library.tscn")
