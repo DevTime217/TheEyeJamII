@@ -21,9 +21,9 @@ position = Vector2(-960, -540)
 visible = false
 position = Vector2(-960, -540)
 
-[node name="Area2D" type="Area2D" parent="." unique_id=601670535]
+[node name="KeyPickupArea" type="Area2D" parent="." unique_id=601670535]
 position = Vector2(100, 100)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=492389964]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KeyPickupArea" unique_id=492389964]
 scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_fr1um")
