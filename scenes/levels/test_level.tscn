@@ -1,10 +1,14 @@
 [gd_scene format=3 uid="uid://doegu8lqtgm41"]
 
 [ext_resource type="PackedScene" uid="uid://do6v51vi1eify" path="res://scenes/objects/player.tscn" id="1_jbqir"]
+[ext_resource type="Script" uid="uid://dve2t7lpdbvl7" path="res://scenes/levels/test_level.gd" id="1_v45ci"]
 [ext_resource type="PackedScene" uid="uid://dd0t8vqmygy66" path="res://scenes/ui/player_ui.tscn" id="2_yautc"]
 [ext_resource type="PackedScene" uid="uid://osx2up4xoi78" path="res://scenes/ui/pause_menu.tscn" id="3_fr1um"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fr1um"]
+
 [node name="TestLevel" type="Node2D" unique_id=699173106]
+script = ExtResource("1_v45ci")
 
 [node name="Player" parent="." unique_id=806946079 instance=ExtResource("1_jbqir")]
 
@@ -16,3 +20,10 @@ position = Vector2(-960, -540)
 [node name="PauseMenu" parent="." unique_id=1823551976 instance=ExtResource("3_fr1um")]
 visible = false
 position = Vector2(-960, -540)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=601670535]
+position = Vector2(100, 100)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=492389964]
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_fr1um")

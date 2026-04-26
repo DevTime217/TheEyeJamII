@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://blt3qejp5gjmg"]
+
+[ext_resource type="Script" uid="uid://yt716te0yrtd" path="res://scenes/ui/intro.gd" id="1_i2slu"]
+[ext_resource type="Texture2D" uid="uid://b5lnfaddhifoe" path="res://assets/textures/desert3.png" id="1_i8df0"]
+
+[node name="Intro" type="Control" unique_id=236682693]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i2slu")
+
+[node name="Background" type="TextureRect" parent="." unique_id=2009281948]
+z_index = -1
+layout_mode = 0
+offset_right = 3000.0
+offset_bottom = 1783.4711
+scale = Vector2(0.64, 0.605)
+mouse_filter = 2
+texture = ExtResource("1_i8df0")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=357673606]
+layout_mode = 0
+offset_left = 554.0
+offset_top = 150.0
+offset_right = 1412.0
+offset_bottom = 465.0
+theme_override_font_sizes/normal_font_size = 32
+text = "> Chary Durdyev, ranger for the Ministry of the environmental protection in the Lebap Region, Turkmenistan..
+> ...on duty for an inspection tour in an unchecked area of the Karakum Desert,...
+> ...now seeing some sort of unknown structure in the distance...
+"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=886232959]
+layout_mode = 0
+offset_left = 820.0
+offset_top = 780.0
+offset_right = 1149.0
+offset_bottom = 832.0
+theme_override_font_sizes/normal_font_size = 32
+text = "Press E to Continue
+"
+fit_content = true
+horizontal_alignment = 1

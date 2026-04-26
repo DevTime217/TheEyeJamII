@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="The Eye Jam II"
-run/main_scene="uid://doegu8lqtgm41"
+run/main_scene="uid://dka8wg1vpuw4e"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
