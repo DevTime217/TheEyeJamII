@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://doegu8lqtgm41"]
+
+[ext_resource type="Script" uid="uid://dve2t7lpdbvl7" path="res://scenes/levels/arrival.gd" id="1_s002n"]
+[ext_resource type="PackedScene" uid="uid://do6v51vi1eify" path="res://scenes/objects/player.tscn" id="2_ajb04"]
+[ext_resource type="PackedScene" uid="uid://dd0t8vqmygy66" path="res://scenes/ui/player_ui.tscn" id="3_tlc7f"]
+[ext_resource type="PackedScene" uid="uid://osx2up4xoi78" path="res://scenes/ui/pause_menu.tscn" id="4_xwocj"]
+[ext_resource type="AudioStream" uid="uid://d0fn7y588ulnc" path="res://assets/music/Wind.mp3" id="5_lnyx0"]
+[ext_resource type="PackedScene" uid="uid://ba6xuqymcpbap" path="res://scenes/objects/wall.tscn" id="6_ajb04"]
+[ext_resource type="AudioStream" uid="uid://b0ebic1qqmsfi" path="res://assets/music/HUM1.mp3" id="6_tlc7f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fr1um"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_48ne7"]
+
+[node name="Arrival" type="Node2D" unique_id=699173106]
+script = ExtResource("1_s002n")
+
+[node name="Player" parent="." unique_id=806946079 instance=ExtResource("2_ajb04")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2138327487]
+
+[node name="PlayerUI" parent="." unique_id=1246732899 instance=ExtResource("3_tlc7f")]
+position = Vector2(-960, -540)
+
+[node name="PauseMenu" parent="." unique_id=1823551976 instance=ExtResource("4_xwocj")]
+visible = false
+position = Vector2(-960, -540)
+
+[node name="KeyPickupArea" type="Area2D" parent="." unique_id=601670535]
+position = Vector2(100, 100)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KeyPickupArea" unique_id=492389964]
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_fr1um")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=86775991]
+stream = ExtResource("5_lnyx0")
+autoplay = true
+parameters/looping = true
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="." unique_id=526999189]
+stream = ExtResource("6_tlc7f")
+autoplay = true
+parameters/looping = true
+
+[node name="LibraryDoor" type="Area2D" parent="." unique_id=326769008]
+position = Vector2(0, -500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LibraryDoor" unique_id=1354006268]
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_48ne7")
+
+[node name="Walls" type="Node2D" parent="." unique_id=267775958]
+
+[node name="Wall" parent="Walls" unique_id=1806059062 instance=ExtResource("6_ajb04")]
+position = Vector2(950, 0)
+scale = Vector2(5, 55)
+
+[node name="Wall2" parent="Walls" unique_id=340823614 instance=ExtResource("6_ajb04")]
+position = Vector2(-950, 0)
+scale = Vector2(5, 55)
+
+[node name="Wall3" parent="Walls" unique_id=1859272963 instance=ExtResource("6_ajb04")]
+position = Vector2(0, 590)
+scale = Vector2(100, 5)
+
+[node name="Wall4" parent="Walls" unique_id=1435414261 instance=ExtResource("6_ajb04")]
+position = Vector2(0, -590)
+scale = Vector2(100, 5)
