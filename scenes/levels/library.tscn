@@ -1,12 +1,17 @@
 [gd_scene format=3 uid="uid://bdo3jraphsjhl"]
 
+[ext_resource type="Script" uid="uid://bp6au54viqque" path="res://scenes/levels/library.gd" id="1_25alp"]
 [ext_resource type="PackedScene" uid="uid://do6v51vi1eify" path="res://scenes/objects/player.tscn" id="1_us7hc"]
 [ext_resource type="PackedScene" uid="uid://dd0t8vqmygy66" path="res://scenes/ui/player_ui.tscn" id="2_chpu4"]
 [ext_resource type="PackedScene" uid="uid://osx2up4xoi78" path="res://scenes/ui/pause_menu.tscn" id="3_25alp"]
 [ext_resource type="AudioStream" uid="uid://tnka8h7t6vrp" path="res://assets/music/HUM2.mp3" id="4_us7hc"]
 [ext_resource type="PackedScene" uid="uid://ba6xuqymcpbap" path="res://scenes/objects/wall.tscn" id="5_cajkx"]
+[ext_resource type="Texture2D" uid="uid://bpt58sqtq65ik" path="res://assets/textures/Door.png" id="6_chpu4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_25alp"]
 
 [node name="Library" type="Node2D" unique_id=319003911]
+script = ExtResource("1_25alp")
 
 [node name="Player" parent="." unique_id=806946079 instance=ExtResource("1_us7hc")]
 
@@ -41,3 +46,14 @@ scale = Vector2(100, 5)
 [node name="Wall4" parent="Walls" unique_id=894942252 instance=ExtResource("5_cajkx")]
 position = Vector2(0, -590)
 scale = Vector2(100, 5)
+
+[node name="BreakDoor" type="Area2D" parent="." unique_id=2074303593]
+position = Vector2(0, -400)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BreakDoor" unique_id=285703050]
+scale = Vector2(5, 5)
+shape = SubResource("RectangleShape2D_25alp")
+
+[node name="Sprite2D" type="Sprite2D" parent="BreakDoor" unique_id=1943587987]
+z_index = -1
+texture = ExtResource("6_chpu4")

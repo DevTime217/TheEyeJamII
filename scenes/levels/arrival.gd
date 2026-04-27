@@ -3,6 +3,7 @@ extends Node2D
 func _process(_delta):
 	if $KeyPickupArea.has_overlapping_bodies() == true:
 		if Input.is_action_just_pressed("interact"):
+			$KeyPickupArea/Sprite2D.visible = false
 			$PlayerUI/Inventory/Key.visible = true
 	if $LibraryDoor.has_overlapping_bodies() == true:
 		if Input.is_action_just_pressed("interact"):

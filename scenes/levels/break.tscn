@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://bi77wterleo4v"]
+
+[ext_resource type="Script" uid="uid://fetn0k5i284f" path="res://scenes/levels/break.gd" id="1_qxerr"]
+[ext_resource type="PackedScene" uid="uid://do6v51vi1eify" path="res://scenes/objects/player.tscn" id="1_utgj5"]
+[ext_resource type="PackedScene" uid="uid://dd0t8vqmygy66" path="res://scenes/ui/player_ui.tscn" id="2_qxerr"]
+[ext_resource type="PackedScene" uid="uid://osx2up4xoi78" path="res://scenes/ui/pause_menu.tscn" id="3_y34c8"]
+[ext_resource type="AudioStream" uid="uid://cx2ffpwva2a51" path="res://assets/music/HUM3.mp3" id="4_enjcc"]
+[ext_resource type="PackedScene" uid="uid://ba6xuqymcpbap" path="res://scenes/objects/wall.tscn" id="5_r10i5"]
+[ext_resource type="Texture2D" uid="uid://bpt58sqtq65ik" path="res://assets/textures/Door.png" id="6_61r4d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qf44v"]
+
+[node name="Break" type="Node2D" unique_id=861652474]
+script = ExtResource("1_qxerr")
+
+[node name="Player" parent="." unique_id=806946079 instance=ExtResource("1_utgj5")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1597751530]
+
+[node name="PlayerUI" parent="." unique_id=1246732899 instance=ExtResource("2_qxerr")]
+position = Vector2(-960, -540)
+
+[node name="PauseMenu" parent="." unique_id=1823551976 instance=ExtResource("3_y34c8")]
+visible = false
+position = Vector2(-960, -540)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=170971968]
+stream = ExtResource("4_enjcc")
+autoplay = true
+parameters/looping = true
+
+[node name="Walls" type="Node2D" parent="." unique_id=1406768950]
+
+[node name="Wall" parent="Walls" unique_id=967362695 instance=ExtResource("5_r10i5")]
+position = Vector2(950, 0)
+scale = Vector2(5, 55)
+
+[node name="Wall2" parent="Walls" unique_id=839039684 instance=ExtResource("5_r10i5")]
+position = Vector2(-950, 0)
+scale = Vector2(5, 55)
+
+[node name="Wall3" parent="Walls" unique_id=1028460335 instance=ExtResource("5_r10i5")]
+position = Vector2(0, 590)
+scale = Vector2(100, 5)
+
+[node name="Wall4" parent="Walls" unique_id=1894897782 instance=ExtResource("5_r10i5")]
+position = Vector2(0, -590)
+scale = Vector2(100, 5)
+
+[node name="KitchenDoor" type="Area2D" parent="." unique_id=1702702476]
+position = Vector2(0, -400)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KitchenDoor" unique_id=115372001]
+scale = Vector2(5, 5)
+shape = SubResource("RectangleShape2D_qf44v")
+
+[node name="Sprite2D" type="Sprite2D" parent="KitchenDoor" unique_id=2142111185]
+z_index = -1
+texture = ExtResource("6_61r4d")
