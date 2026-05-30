@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://bjoqev3ylq7tx"]
+
+[ext_resource type="Texture2D" uid="uid://b5lnfaddhifoe" path="res://assets/textures/desert3.png" id="1_0t4c0"]
+[ext_resource type="Script" uid="uid://dpo25ld6hc2q4" path="res://scenes/ui/ending.gd" id="1_q1ola"]
+[ext_resource type="AudioStream" uid="uid://d0fn7y588ulnc" path="res://assets/music/Wind.mp3" id="2_q1ola"]
+
+[node name="Ending" type="Control" unique_id=464566806]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q1ola")
+
+[node name="Background" type="TextureRect" parent="." unique_id=276468437]
+z_index = -1
+layout_mode = 0
+offset_right = 3000.0
+offset_bottom = 1783.4711
+scale = Vector2(0.64, 0.605)
+mouse_filter = 2
+texture = ExtResource("1_0t4c0")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=446329706]
+layout_mode = 0
+offset_left = 554.0
+offset_top = 150.0
+offset_right = 1412.0
+offset_bottom = 465.0
+theme_override_font_sizes/normal_font_size = 32
+text = "I have been summoned.
+
+This small universe is over.
+
+What about yours, you person in front of the screen?"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=1399498240]
+layout_mode = 0
+offset_left = 820.0
+offset_top = 780.0
+offset_right = 1149.0
+offset_bottom = 832.0
+theme_override_font_sizes/normal_font_size = 32
+text = "Press E to Continue
+"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=596561541]
+stream = ExtResource("2_q1ola")
+volume_db = -40.0
+autoplay = true
+parameters/looping = true

@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://ba6xuqymcpbap" path="res://scenes/objects/wall.tscn" id="6_ajb04"]
 [ext_resource type="AudioStream" uid="uid://b0ebic1qqmsfi" path="res://assets/music/HUM1.mp3" id="6_tlc7f"]
 [ext_resource type="Texture2D" uid="uid://bpt58sqtq65ik" path="res://assets/textures/Door.png" id="7_xwocj"]
+[ext_resource type="Texture2D" uid="uid://b5lnfaddhifoe" path="res://assets/textures/desert3.png" id="10_qo1di"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fr1um"]
 
@@ -78,3 +79,13 @@ scale = Vector2(100, 5)
 [node name="Wall4" parent="Walls" unique_id=1435414261 instance=ExtResource("6_ajb04")]
 position = Vector2(0, -590)
 scale = Vector2(100, 5)
+
+[node name="Background" type="TextureRect" parent="." unique_id=338453753]
+z_index = -2
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 2040.0
+offset_bottom = 1243.4711
+scale = Vector2(0.64, 0.605)
+mouse_filter = 2
+texture = ExtResource("10_qo1di")

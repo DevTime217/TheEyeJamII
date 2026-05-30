@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://tnka8h7t6vrp" path="res://assets/music/HUM2.mp3" id="4_us7hc"]
 [ext_resource type="PackedScene" uid="uid://ba6xuqymcpbap" path="res://scenes/objects/wall.tscn" id="5_cajkx"]
 [ext_resource type="Texture2D" uid="uid://bpt58sqtq65ik" path="res://assets/textures/Door.png" id="6_chpu4"]
+[ext_resource type="Texture2D" uid="uid://b5lnfaddhifoe" path="res://assets/textures/desert3.png" id="8_k7bkh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_25alp"]
 
@@ -57,3 +58,13 @@ shape = SubResource("RectangleShape2D_25alp")
 [node name="Sprite2D" type="Sprite2D" parent="BreakDoor" unique_id=1943587987]
 z_index = -1
 texture = ExtResource("6_chpu4")
+
+[node name="Background" type="TextureRect" parent="." unique_id=993451343]
+z_index = -2
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 2040.0
+offset_bottom = 1243.4711
+scale = Vector2(0.64, 0.605)
+mouse_filter = 2
+texture = ExtResource("8_k7bkh")

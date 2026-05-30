@@ -30,9 +30,11 @@ offset_top = 150.0
 offset_right = 1412.0
 offset_bottom = 465.0
 theme_override_font_sizes/normal_font_size = 32
-text = "> Chary Durdyev, ranger for the Ministry of the environmental protection in the Lebap Region, Turkmenistan..
-> ...on duty for an inspection tour in an unchecked area of the Karakum Desert,...
-> ...now seeing some sort of unknown structure in the distance...
+text = "Chary Durdyev, ranger for the Ministry of the environmental protection in the Lebap Region, Turkmenistan..
+
+ ...on duty for an inspection tour in an unchecked area of the Karakum Desert,...
+
+...now seeing some sort of unknown structure in the distance...
 "
 fit_content = true
 horizontal_alignment = 1

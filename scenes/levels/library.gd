@@ -6,4 +6,4 @@ func _ready():
 func _process(_delta):
 	if $BreakDoor.has_overlapping_bodies() == true:
 		if Input.is_action_just_pressed("interact"):
-			get_tree().change_scene_to_file("res://scenes/levels/break.tscn")
+			get_tree().change_scene_to_file("res://scenes/ui/ending.tscn")
